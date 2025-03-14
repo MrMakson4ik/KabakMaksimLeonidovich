@@ -22,9 +22,69 @@
         <font color="red"><del>Данный текст убрать из монографии</del></font> и заменить его <font color="blue"><u>на вновь помещённый текст</u></font>.
     </p>
     <hr>
-    <h2>Работа со строчными и блоковыми цитатами</h2>
-    <p>Цитата короткая: <br>
-    <cite>И всётаки она вертится!</site></p>
+    <h2>Работа со строчными и блоковыми цитатами</h2>
+    <p>Цитата короткая: <br>
+    <cite>И всётаки она вертится!</site></p>
+    <p>Цитата занимающая несколько предложений:</p>
+    <blockquote>О сколько нам открытий чудных<br> 
+                Готовят просвещенья дух<br>
+                И опыт, сын ошибок трудных, И гений, парадоксов друг,<br>
+                И случай, бог изобретатель...</blockquote>
+    <hr>
+    <h2>Семантические и функциональные строчные теги</h2>
+    <strong>Тэг &#60;STRONG&#62; делает данный фрагмент текста более важным.</strong> <em>Тэг &#60;em&#62; менее важным.</em><br> 
+    В то время как теги &#60;b&#62; и &#60;i&#62; делают текст просто <strong>полужирным</strong> и <em>курсивом</em> соответственно.
+    <h2>Теги форматирования машинного языка</h2>
+    <p>При выполнении программного кода на языке PERL:</p>
+    <code>
+      #!/usr/local/bin/perl<br>
+      print "Content-type: text/html\n\n";<br>
+      print "&#60;H1&#62;Hello World&#60;/H1&#62;\n"
+    </code>
+    <p>Программа выведет:</p>
+    <code>Hello, World!</code>
+    <p>Однако в браузере у нас будет отображаться результат выполнения этой программы:</p>
+    <!--Уточнить-->
+    <big><strong>Hello, World!</strong></big>
+    <hr>
+    <h2>Комментарии и литералы(мнемоники) в HTML</h2>
+    <!--Уточнить-->
+    <code>&#60;!-- это комментарий --&#62;</code>
+    <blockquote>
+      <code>
+      &#60;!-- и это также комментарий,<br>
+      занимающий более одной строки --&#62;
+      </code>
+    </blockquote>
+    <hr>
+    <h2>Теги над- и подстрочных символов</h2>
+    <h3 align="center">Магазин работает:</h3>
+    <p align="center">
+      c 08<sup><u>30</u></sup> до 18<sup><u>30</u></sup><br>
+      обед с 13<sup><u>00</u></sup> до 14<sup><u>00</u></sup><br>
+      выходной: <u>суббота</u>, <u>воскресенье</u>
+    </p>
+    <hr>
+    <h2>Вот такой текст</h2>
+    <p><big><strong>
+      Э<sub><sub><sub><big><big><big>т</big></big></big></sub></sub></sub>
+      о<sub><sub><sub><big><big><big>п</big></big></big></sub></sub></sub>
+      р<sub><sub><sub><big><big><big>о</big></big></big></sub></sub></sub>
+      с<sub><sub><sub><big><big><big>т</big></big></big></sub></sub></sub>
+      о<sub><sub><sub><big><big><big>в</big></big></big></sub></sub></sub>
+      е<sub><sub><sub><big><big><big>с</big></big></big></sub></sub></sub>
+      е<sub><sub><sub><big><big><big>л</big></big></big></sub></sub></sub>
+      ы<sub><sub><sub><big><big><big>й</big></big></big></sub></sub></sub>
+      т<sub><sub><sub><big><big><big>е</big></big></big></sub></sub></sub>
+      к<sub><sub><sub><big><big><big>с</big></big></big></sub></sub></sub>
+      т</strong></big></p>
+    <hr>
+    <h2>Акроним и курсив</h2>
+    <p>ТФ: Y(<em>x</em>)=e <sup><em>-i&pi;x</em></sup>+log<sub><em>x</em></sub>4</p>
+    <hr>
+    <h2>Тег small внтури абзаца</h2>
+    <p align="right">Создано при помощи блокнота&copy;</p>
+    
 </head>
 <body>
     
