@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Montserrat Underline';
+    src: url('MontserratUnderline-Thin.eot');
+    src: url('MontserratUnderline-Thin.eot?#iefix') format('embedded-opentype'),
+        url('MontserratUnderline-Thin.woff2') format('woff2'),
+        url('MontserratUnderline-Thin.woff') format('woff'),
+        url('MontserratUnderline-Thin.ttf') format('truetype'),
+        url('MontserratUnderline-Thin.svg#MontserratUnderline-Thin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
