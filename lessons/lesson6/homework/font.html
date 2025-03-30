@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font</title>
+</head>
+<body>
+    <h1>Устаревший тег FONT</h1>
+    <p><font color="#BruceWillis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur eligendi consequatur, nam nihil, 
+        laborum nemo dignissimos a in cupiditate sit, velit quas ea quae? Aliquid cum error laborum corporis tempore.</font></p>
+    <p><font color="#CANDY">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus animi atque ratione delectus, 
+        ducimus illo quisquam vero natus. Temporibus labore, enim vitae quo nam doloremque ullam ipsum minima amet!</font></p>
+    <p>При указании цвета в устаревшем теге FONT произвольными символами латиницы интерпритатор пытается прочитать его как 
+        шестнадцатиречный код, при этом заменяя каждый символ не входящий в данную систему исчисления на 0. В итоге интерпритатор
+        видит записи в следующем виде: для BruceWillis как B00СE000000, а для CANDY как CA0D0 <br>
+        C учетом того, что для реализации цвета RGB необходимо 3 параметра, интерпритатор разбивает записи на 3 группы символов 
+        B00С E000 000 и CA 0D 0 соответсвенно, и читает в каждой группе только первые 2 символа, записывая итоговое значение цветов
+        в следующем виде:
+    </p>
+    <ul>
+        <li>B0 E0 00</li><img src="BruceWillis.png" alt="BruceWillis" width="500"><br>
+        <li>CA 0D 00 (отсутствие второго символа в группе 3 инторпритируется как 0)</li><img src="CANDY.png" alt="CANDY" width="500">
+    </ul>
+    
+</body>
+</html>
