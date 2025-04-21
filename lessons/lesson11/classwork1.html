@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .header{
+            border: solid black 1px;
+            background-color: aqua;
+        }
+        .wrap{
+            background-color: blueviolet;
+        }
+        .menu{
+            border: solid black;
+            border-width: 0px 1px;
+            background-color: green;
+            float: left;
+            width: 15%;
+            height: 400px;
+        }
+        .baner{
+            border: solid black;
+            border-width: 0px 1px;
+            background-color: green;
+            float: right;
+            width: 15%;
+            height: 400px;
+        }
+        .text{
+            background-color: blanchedalmond;   
+            height: 200px;
+        }
+        .footer{
+            border: solid black 1px;
+            background-color: aqua;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header clearfix">
+        <div style="border: solid black 1px; margin: 5px; width: 200px; height: 25px; float: left; background-color: yellow;"></div>
+        <div style="border: solid black 1px; margin: 5px; width: 200px; height: 25px; float: left; background-color: yellow;"></div>
+        <div style="border: solid black 1px; margin: 5px; width: 200px; height: 25px; float: left; background-color: yellow;"></div>
+        <div style="border: solid black 1px; margin: 5px; width: 200px; height: 25px; float: left; background-color: yellow;"></div>
+    </div>
+    <div class="wrap clearfix">
+        <div class="menu"></div>
+        <div class="baner"></div>
+        <div class="text"></div>
+    </div>
+    <div class="footer"></div>
+</body>
+</html>
