@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* a1 */
+        body > div li:nth-of-type(1) > a {
+            color: red;
+        }
+        /* a2 */
+        body > div li:nth-of-type(2) a {
+            color: green;
+        }
+        /* a3 */
+        body > div li:nth-of-type(3) a {
+            color: blue;
+        }
+        /* a4 */
+        body > div > p a:nth-child(1) {
+            color: yellow;
+        }
+        /* a5 */
+        body > div > span a:nth-child(1) {
+            color: black;
+        }
+        /* a6 */
+        body > ul > li > a:nth-child(1) {
+            color: orange;
+        }
+        /* a7 */
+        body > ul > li > span > a:nth-child(1) {
+            color: rosybrown;
+        }
+        /* a8 */
+        body > ul > li > em > a:nth-child(1) {
+            color: violet;
+        }
+        /* a9 */
+        body > ul > li > p > em > a:nth-child(1) {
+            color: aqua;
+        }
+        /* a10 */
+        body > ul > li > div > ul > li:nth-of-type(1) > a {
+            color: indigo;
+        }
+        /* a11 */
+        body > ul > li > div > ul > li:nth-of-type(2) > em > a {
+            color: chocolate;
+        }
+        /* a12 */
+        body > ul > li > div > ul > li:nth-of-type(3) > span > a {
+            color: brown;
+        }
+        /* a13 */
+        body > ul > li > div > p > a {
+            color: white;
+        }
+        /* a14 */
+        body > p > em > a {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>
+                <!-- a1 red -->
+                <a href="">a1</a>
+            </li>
+            <li>
+                <span>
+                    <!-- a2 green -->
+                    <a href="">a2</a>
+                </span>
+            </li>
+            <li>
+                <em>
+                    <!-- a3 blue -->
+                    <a href="">a3</a>
+                </em>
+            </li>
+        </ul>
+        <p>
+            <em>
+                <!-- a4 yellow --> 
+                <a href="">a4</a>
+            </em>
+        </p>
+        <span>
+            <em>
+                <!-- a5 black -->
+                <a href="">a5</a>
+            </em>
+        </span>
+    </div>
+    <ul>
+        <li>
+            <!-- a6 orange -->
+            <a href="">a6</a>
+            <span>
+                <!-- a7 rose -->
+                <a href="">a7</a>
+            </span>
+            <em>
+                <!-- a8 violet -->
+                <a href="">a8</a>
+            </em>
+        </li>
+        <li>
+            <p>
+                <em>
+                    <!-- a9 aqua --> 
+                    <a href="">a9</a>
+                </em>
+            </p>
+        </li>
+        <li>
+            <div>
+                <ul>
+                    <li>
+                        <!-- a10 indigo -->
+                         <a href="">a10</a>
+                    </li>
+                    <li>
+                        <em>
+                            <!-- a11 chocolate -->
+                            <a href="">a11</a>
+                        </em>
+                    </li>
+                    <li>
+                        <span>
+                            <!-- a12 brown -->
+                            <a href="">a12</a>
+                        </span>
+                    </li>
+                </ul>
+                <p>
+                    <!-- a13 white -->
+                    <a href="">a13</a>
+                </p>
+            </div>
+        </li>
+    </ul>
+    <p>
+        <em>
+            <!-- a14 gray -->
+            <a href="">a14</a>
+        </em>
+    </p>
+
+</body>
+</html>
