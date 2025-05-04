@@ -60,3 +60,15 @@ hr{
     height: 2px;
     clear: both;
 }
+.tip_1{
+    height: 903px;
+    background-color: #242424;
+    background-image: url(../img/tip_1_1.png), url(../img/tip_1_2.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: 0% 0%, 100% 0%;
+}
+.tip_1_2{
+    text-align: center;
+}
+
+
