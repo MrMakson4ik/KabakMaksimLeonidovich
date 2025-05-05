@@ -61,13 +61,22 @@ hr{
     clear: both;
 }
 .tip_1{
-    height: 903px;
+    /* height: 903px; */
     background-color: #242424;
     background-image: url(../img/tip_1_1.png), url(../img/tip_1_2.svg);
     background-repeat: no-repeat, no-repeat;
     background-position: 0% 0%, 100% 0%;
 }
+.tip_1_1{
+    /* height: 200px; */
+}
 .tip_1_2{
+    text-align: center;
+    border-bottom: solid;
+    border-color: blue;
+    border-width: 2px;
+}
+.tip_2_2{
     text-align: center;
 }
 
