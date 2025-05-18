@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+
+    <style>
+        .header{
+            background-color: aqua;
+            height: 20px; 
+        }
+        .wrap{
+            display: flex;
+            flex-direction: row;
+
+        }
+        .menu{
+            flex: 0 0 100px;
+            background-color: aquamarine;
+        }
+        .content{
+            flex: 1 0 100px;
+            background-color: blanchedalmond;
+        }
+        .content2{
+            background-color: azure;
+            border: solid 1px black;
+            height: 50px;
+            margin: 10px;
+        }
+        .baner{
+            flex: 0 0 100px;
+            background-color: yellow;
+        }
+        .futer{
+            background-color: blueviolet;
+            height: 20px;
+        }
+
+        @media all and (max-width: 1000px){
+            .header{
+            background-color: aqua;
+            height: 20px; 
+        }
+        .wrap{
+            display: flex;
+            flex-direction: column;
+        }
+        .menu{
+            flex: 0 0 100px;
+            background-color: aquamarine;
+            order: 3;
+        }
+        .content{
+            flex: 1 0 100px;
+            background-color: blanchedalmond;
+            order: 1;
+        }
+        .content2{
+            background-color: azure;
+            border: solid 1px black;
+            height: 50px;
+            margin: 10px;
+        }
+        .baner{
+            flex: 0 0 100px;
+            background-color: yellow;
+            order: 2;
+        }
+        .futer{
+            background-color: blueviolet;
+            height: 20px;
+        }
+        }
+
+        
+
+    </style>
+
+</head>
+<body>
+    <div class="header"></div>   
+    <div class="wrap">
+        <div class="menu"></div>
+        <div class="content">
+            <div class="content2"></div>
+        </div>
+        <div class="baner"></div>
+    </div>
+    <div class="futer"></div>
+</body>
+</html>
