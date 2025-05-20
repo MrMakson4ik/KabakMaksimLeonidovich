@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stars</title>
+</head>
+    <style>
+        .img{
+            width: 75px;
+            height: 78px;
+            background-image: url(star0.png);
+            float: right;
+        }
+        
+        .img:hover{
+            background-image: url(star1.png);
+        }
+        
+        .img:hover ~ .img{
+            background-image: url(star1.png);
+        }
+    </style>
+<body>
+    <div style="float: left;">
+        <div class="img">
+        </div>
+        <div class="img">
+        </div>
+        <div class="img">
+        </div>
+        <div class="img">
+        </div>
+        <div class="img">
+        </div>
+    </div>   
+</body>
+</html>
