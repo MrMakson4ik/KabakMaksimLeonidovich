@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>links</title>
+
+    <style>
+        .clerfix{
+            display: block;
+            content: '';
+            clear: both;
+        }
+/* ______________________________________Начало Метода m1_________________________________________ */
+        div.m1{
+            padding: 0;
+            margin: 0;
+        }
+
+        div.m1 ul{
+            padding: 0px;
+        }
+
+        div.m1 li{
+            margin: 10px 10px 30px 10px;
+            float: left;
+        }
+
+        div.m1 li{
+            list-style-image: url(razdel.gif);
+            vertical-align: middle;
+        }
+
+        div.m1 li:first-child{
+
+            list-style-type: none;
+            margin-left: 0;
+        }
+/* ______________________________________Конец Метода m1_________________________________________ */      
+/* ______________________________________Начало Метода m2_________________________________________ */
+        div.m2{
+            margin-top: 20px;
+        }
+        
+        div.m2 a{
+            padding: 10px;
+            margin: 10px 0px;
+        }
+
+        div.m2 a:not(:first-child){
+            border-left: solid 3px red;
+        }
+/* ______________________________________Конец Метода m2_________________________________________ */
+
+        a:link{
+            color: green;
+        }
+
+        a:visited{
+            color: green;
+        }
+
+        a:hover{
+            color: red;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- Метод 1: Ипользование блочного тега ul со стилевым свойством float к тегам li, прижимая их к левому краю, для формирования списка в строку, 
+     в качестве разделителя используется подготовленная картинка вместо стандатного маркера.
+     P.S. способ довольно карявый, уточнить почему не выравнивается  содержимое li при помощи свойсва vertical-align: middle-->
+    <div class="m1 clerfix">
+        <ul>
+            <li><a href="" target="_blank">первая ссылка</a></li>
+            <li><a href="" target="_blank">вторая ссылка</a></li>
+            <li><a href="" target="_blank">третья ссылка</a></li>
+            <li><a href="" target="_blank">четвертая ссылка</a></li>
+            <li><a href="" target="_blank">пятая ссылка</a></li>
+        </ul>
+    </div>
+    <!-- Метод 2: использование гиперсылок в строку, в качестве разделителя используется рамка слева для каждого тега a кроме первого 
+     (анлогичным способом можно реализовать рамку справа для каждого тега а, кроме последнего)-->
+    <div class="m2 clerfix">
+        <a href="" target="_blank">первая ссылка</a>
+        <a href="" target="_blank">вторая ссылка</a>
+        <a href="" target="_blank">третья ссылка</a>
+        <a href="" target="_blank">четвертая ссылка</a>
+        <a href="" target="_blank">пятая ссылка</a>
+        
+    </div>
+</body>
+</html>
