@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anim</title>
+    <style>
+        .container{
+            position: relative;
+            width: 1200px;
+            height: 600px;
+            background-color: aquamarine;
+        }
+
+        .obgect1{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: blueviolet;
+            animation: MyAnimation1 3s infinite;
+        }
+
+        @keyframes MyAnimation1{
+            0% { top: 0px; left: 0px; }
+            50% { top: 0px; left: 1150px; }
+            100% { top: 0px; left: 0px; }
+        }
+
+        .obgect2{
+            position: absolute;
+            width: 1100px;
+            height: 500px;
+            top: 50px;
+            left: 50px;
+            background-color: yellow;
+        }
+
+        @keyframes MyAnimation2{
+            0% { background-color: yellow; }
+            50% { background-color: brown; }
+            100% { background-color: yellow; }
+
+        }
+
+        label:hover{
+            .obgect2{
+                animation: MyAnimation2 2s infinite;
+            }
+            .obgect3{
+                animation: MyAnimation3 2s infinite;
+            }
+        }
+
+        .obgect3{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 200px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: aqua;
+        }
+
+        @keyframes MyAnimation3 {
+            0% {
+                width: 200px;
+                height: 100px;
+            }
+            50% {
+                width: 100px;
+                height: 200px;
+            }
+            100% {
+                width: 200px;
+                height: 100px;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <label><div class="container">
+        <div class="obgect1"></div>
+        <div class="obgect2"></div>
+        <div class="obgect3"></div>
+    </div></label>
+</body>
+</html>
