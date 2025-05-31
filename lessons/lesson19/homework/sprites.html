@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sprites</title>
+    <style>
+        @keyframes sonic{
+            0% {
+                background: url(sonicAnim.png) 0 0;
+            }
+            100% {
+                background: url(sonicAnim.png) -748px 0;
+            }
+        }
+
+        .sprites{
+            width: 44px;
+            height: 55px;
+            animation: sonic 2s steps(17) infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="sprites">
+    </div>
+</body>
+</html>
