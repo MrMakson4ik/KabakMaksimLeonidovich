@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1080px;
+}
+// __________________________________HEADER_________________________________
+.header {
+    background-image: url(../img/BackgroundHeader.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 124px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;
+
+
+        img.second1:nth-of-type(1) {
+            position: absolute;
+            top: 140px;
+            right: -225px;
+        }
+
+        img.second2:nth-of-type(2) {
+            position: absolute;
+            top: 160px;
+            right: -30px;
+        }
+    }
+}
+
+.headerTop {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.headerContactsMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 684px;
+}
+
+.headerContacts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.headerContacts1 {
+    display: flex;
+
+    img {
+        width: 32px;
+        height: 32px;
+    }
+
+    p {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        color: white;
+        margin-left: 8px;
+    }
+
+    img:not(:first-of-type) {
+        margin-left: 12px;
+    }
+}
+
+.headerContacts2 {
+    img:not(:last-of-type) {
+        margin-right: 20px;
+    }
+}
+
+.headerMenu {
+    margin-top: 24px;
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+    }
+
+    li {
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        color: white;
+        position: relative;
+        cursor: pointer
+    }
+
+    li:not(:first-of-type) {
+        border-left: solid 3px rgba(231, 116, 46, 1);
+        padding-left: 10px;
+    }
+
+    li:hover {
+        div.headerMenuLevel2 {
+            display: block;
+            position: absolute;
+            top: 100%;
+            z-index: 1;
+        }
+    }
+
+    li:not(:last-of-type) {
+        padding-right: 10px;
+    }
+}
+
+.headerMenuLevel2 {
+    width: 274px;
+    display: none;
+
+    div {
+        background-color: rgba(11, 20, 39, 0.8);
+        border-bottom: solid 1px rgba(231, 116, 46, 1);
+        cursor: pointer;
+        height: 43px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        color: white;
+        vertical-align: center;
+        padding-left: 24px;
+        display: flex;
+        align-items: center;
+
+
+    }
+
+    div:first-of-type {
+        border-top: solid 1px rgba(231, 116, 46, 1);
+    }
+}
+
+.headerContent {
+    margin-top: 90px;
+
+    h1 {
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 60px;
+        color: rgba(231, 116, 46, 1);
+        width: 620px;
+    }
+
+    h2 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        color: white;
+        width: 600px;
+        margin-top: 30px;
+    }
+
+    h3 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 24px;
+        color: rgba(231, 116, 46, 1);
+        width: 600px;
+        margin-top: 12px;
+    }
+
+    button {
+        margin-top: 44px;
+        width: 321px;
+        height: 65px;
+        border-radius: 10px;
+        background-image: radial-gradient(rgba(246, 167, 12, 1), rgba(231, 116, 46, 1));
+        color: black;
+        text-transform: uppercase;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 600;
+        font-size: 24px;
+    }
+}
+
+// _______________________________НАЧАЛО АДАПТИВ HEADER____________________________________
+@media all and (max-width: 420px) {
+
+.container {
+    width: 358px;
+
+    > img {
+        display: none;
+    }
+
+    .headerTop {
+        margin-top: 26px;
+        flex-direction: column;
+
+        .headerContactsMenu {
+            order: 1;
+
+            .headerContacts {
+            flex-direction: column;
+
+            .headerContacts1{
+                p::after {
+                    content: "\A";
+                    white-space: pre;
+                    display: block;
+                }
+            }
+            }
+        }
+    }
+
+        .logo {
+        order: 2;
+        }
+}
+} 
+
+// _______________________________КОНЕЦ АДАПТИВ HEADER_____________________________________
+
+.service {
+    margin-top: 40px;
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 40px;
+
+        &>div {
+            width: 344px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            div {
+                display: flex;
+                justify-content: space-between;
+
+                img {
+                    width: 165px;
+                    height: 95px;
+                }
+
+                div {
+                    width: 84px; 
+                    border-bottom: solid 1px rgba(11, 20, 39, 1);
+                }
+            }
+
+            h2 {
+                text-transform: uppercase;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 500;
+                font-size: 29px;
+                text-align: center;
+                margin-top: 28px;
+                height: 70px;
+            }
+
+            ul {
+                margin-top: 16px;
+                list-style-image: url(../img/Vector.png);
+
+                li {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+
+                li:last-of-type {
+                    list-style-image: none;
+                    list-style-type: none;
+                }
+            }
+
+            button {
+                margin-top: 28px;
+                width: 304px;
+                height: 52px;
+                border-radius: 10px;
+                background-color: rgba(222, 222, 222, 1);
+                color: black;
+                text-transform: uppercase;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 600;
+                font-size: 18px;
+            }
+
+        }
+
+    }
+}
