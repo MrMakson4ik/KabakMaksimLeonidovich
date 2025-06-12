@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -38,6 +39,11 @@
   margin-top: 40px;
 }
 
+.logo img {
+  width: 236px;
+  height: 114px;
+}
+
 .headerContactsMenu {
   display: flex;
   flex-direction: column;
@@ -53,23 +59,31 @@
 .headerContacts1 {
   display: flex;
 }
-.headerContacts1 img {
+.headerContacts1 div {
+  display: flex;
+}
+.headerContacts1 div img {
   width: 32px;
   height: 32px;
 }
-.headerContacts1 p {
+.headerContacts1 div p {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 24px;
   color: white;
   margin-left: 8px;
 }
-.headerContacts1 img:not(:first-of-type) {
+.headerContacts1 div img:not(:first-of-type) {
   margin-left: 12px;
 }
 
 .headerContacts2 img:not(:last-of-type) {
   margin-right: 20px;
+}
+
+/* Скрываем чекбокс */
+#toggle {
+  display: none;
 }
 
 .headerMenu {
@@ -175,20 +189,95 @@
   .container .headerTop {
     margin-top: 26px;
     flex-direction: column;
+    position: relative;
   }
   .container .headerTop .headerContactsMenu {
-    order: 1;
+    /* Стили для картинки */
+    /* Меняем картинку при активном чекбоксе */
+    /* Скрываем выпадающий список по умолчанию */
+    /* Показываем выпадающий список при активном чекбоксе */
   }
   .container .headerTop .headerContactsMenu .headerContacts {
     flex-direction: column;
+    position: relative;
   }
-  .container .headerTop .headerContactsMenu .headerContacts .headerContacts1 p::after {
-    content: "\a";
-    white-space: pre;
+  .container .headerTop .headerContactsMenu .headerContacts .headerContacts1 {
+    flex-direction: column;
+  }
+  .container .headerTop .headerContactsMenu .headerContacts .headerContacts1 div {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .container .headerTop .headerContactsMenu .headerContacts .headerContacts2 {
+    position: absolute;
+    top: 105px;
+    right: 48%;
+  }
+  .container .headerTop .headerContactsMenu .label-img {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 0%;
+    width: 36px;
+    height: 32px;
+    background-image: url(../img/open.png);
+    background-size: cover;
+  }
+  .container .headerTop .headerContactsMenu #toggle:checked + .label-img {
+    background-image: url(../img/close.png);
+  }
+  .container .headerTop .headerContactsMenu .headerMenu {
+    display: none;
+  }
+  .container .headerTop .headerContactsMenu .headerMenu ul {
+    position: relative;
+    top: 70px;
+    flex-direction: column;
+    width: 358px;
+  }
+  .container .headerTop .headerContactsMenu .headerMenu ul li {
+    height: 55px;
+    border-left: none;
+    padding-left: 0px;
+    border-top: solid 1px rgb(231, 116, 46);
+    vertical-align: center;
+    align-items: center;
+    display: flex;
+  }
+  .container .headerTop .headerContactsMenu .headerMenu ul li:hover div.headerMenuLevel2 {
     display: block;
   }
+  .container .headerTop .headerContactsMenu .headerMenu ul li:last-of-type {
+    border-bottom: solid 1px rgb(231, 116, 46);
+  }
+  .container .headerTop .headerContactsMenu #toggle:checked ~ .headerMenu {
+    display: block;
+  }
+  .container .headerTop .headerContactsMenu .headerMenuLevel2 {
+    width: 358px;
+  }
+  .container .headerTop .headerContactsMenu .headerMenuLevel2 div {
+    background-color: rgb(11, 20, 39);
+    height: 55px;
+    text-transform: none;
+  }
   .container .logo {
-    order: 2;
+    position: absolute;
+    top: 70px;
+  }
+  .container .logo img {
+    width: 144px;
+    height: 69px;
+  }
+  .headerContent h1 {
+    font-size: 34px;
+    width: 358px;
+  }
+  .headerContent h2,
+  .headerContent h3 {
+    font-size: 20px;
+    width: 358px;
   }
 }
 .service {

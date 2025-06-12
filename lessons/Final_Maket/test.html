@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Скрываем чекбокс */
+    #toggle {
+        display: none;
+    }
+
+    /* Стили для картинки */
+    .label-img {
+        cursor: pointer;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        background-image: url('image1.jpg');
+        background-size: cover;
+        transition: background-image 0.3s ease;
+    }
+
+    /* Меняем картинку при активном чекбоксе */
+    #toggle:checked+.label-img {
+        background-image: url('image2.jpg');
+    }
+
+    /* Скрываем выпадающий список по умолчанию */
+    .dropdown {
+        display: none;
+        position: absolute;
+        background: white;
+        border: 1px solid #000;
+        margin-top: 5px;
+        padding: 10px;
+        width: 150px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Показываем выпадающий список при активном чекбоксе */
+    #toggle:checked~.dropdown {
+        display: block;
+    }
+</style>
+
+<body>
+    <label for="toggle" class="label-img"></label>
+    <input type="checkbox" id="toggle" />
+    <div class="dropdown">
+        <ul>
+            <li>Пункт 1</li>
+            <li>Пункт 2</li>
+            <li>Пункт 3</li>
+        </ul>
+    </div>
+</body>
+
+</html>
