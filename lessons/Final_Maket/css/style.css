@@ -86,15 +86,12 @@
   display: none;
 }
 
-.headerMenu {
+ul.headerMenu {
   margin-top: 24px;
-}
-.headerMenu ul {
   display: flex;
   list-style-type: none;
-  justify-content: center;
 }
-.headerMenu li {
+ul.headerMenu li {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -103,20 +100,20 @@
   position: relative;
   cursor: pointer;
 }
-.headerMenu li:not(:first-of-type) {
+ul.headerMenu > li:not(:first-of-type) {
   border-left: solid 3px rgb(231, 116, 46);
   padding-left: 10px;
 }
-.headerMenu li:hover {
+ul.headerMenu li:hover {
   color: rgb(231, 116, 46);
 }
-.headerMenu li:hover div.headerMenuLevel2 {
+ul.headerMenu li:hover ul.headerMenuLevel2 {
   display: block;
   position: absolute;
   top: 100%;
   z-index: 1;
 }
-.headerMenu li:not(:last-of-type) {
+ul.headerMenu li:not(:last-of-type) {
   padding-right: 10px;
 }
 
@@ -124,7 +121,7 @@
   width: 274px;
   display: none;
 }
-.headerMenuLevel2 div {
+.headerMenuLevel2 > li {
   background-color: rgba(11, 20, 39, 0.8);
   border-bottom: solid 1px rgb(231, 116, 46);
   cursor: pointer;
@@ -137,10 +134,10 @@
   display: flex;
   align-items: center;
 }
-.headerMenuLevel2 div:hover {
+.headerMenuLevel2 > li:hover {
   color: rgb(231, 116, 46);
 }
-.headerMenuLevel2 div:first-of-type {
+.headerMenuLevel2 > li:first-of-type {
   border-top: solid 1px rgb(231, 116, 46);
 }
 
@@ -247,6 +244,93 @@
   font-size: 18px;
 }
 
+.doWhat {
+  background-color: rgb(11, 20, 39);
+}
+.doWhat .container {
+  position: relative;
+}
+.doWhat .container img {
+  position: absolute;
+  left: -145px;
+  top: 145px;
+}
+.doWhat .container h2 {
+  padding-top: 40px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  color: rgb(231, 116, 46);
+  text-align: center;
+}
+.doWhat .container hr {
+  margin-top: 19px;
+  height: 3px;
+  color: white;
+}
+.doWhat .container > div:first-of-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.doWhat .container > div:first-of-type .verticalLine {
+  height: 42px;
+  border-left: solid 3px white;
+}
+.doWhat .container > div:first-of-type .doWhat1 {
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  left: 255px;
+}
+.doWhat .container > div:first-of-type .doWhat1 .doWhat11 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border: solid 3px white;
+  border-radius: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 42px;
+  color: rgb(231, 116, 46);
+}
+.doWhat .container > div:first-of-type .doWhat1 .doWhat12 {
+  width: 500px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: white;
+  align-self: center;
+  margin-left: 10px;
+}
+.doWhat .container > div:first-of-type .doWhat1:nth-child(2) div.doWhat11 {
+  background-image: radial-gradient(rgb(246, 167, 12), rgb(231, 116, 46));
+  color: white;
+}
+.doWhat .container > div:nth-of-type(2) {
+  margin-top: 43px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+  position: relative;
+}
+.doWhat .container > div:nth-of-type(2) div {
+  width: 421px;
+  height: 3px;
+  background-color: white;
+}
+.doWhat .container > div:nth-of-type(2) p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: rgb(231, 116, 46);
+}
+
 @media all and (max-width: 420px) {
   .container {
     width: 358px;
@@ -295,16 +379,13 @@
   .container .headerTop .headerContactsMenu #toggle:checked + .label-img {
     background-image: url(../img/close.png);
   }
-  .container .headerTop .headerContactsMenu .headerMenu {
+  .container .headerTop .headerContactsMenu ul.headerMenu {
     display: none;
-  }
-  .container .headerTop .headerContactsMenu .headerMenu ul {
     position: relative;
     top: 70px;
-    flex-direction: column;
     width: 358px;
   }
-  .container .headerTop .headerContactsMenu .headerMenu ul li {
+  .container .headerTop .headerContactsMenu ul.headerMenu > li {
     height: 55px;
     border-left: none;
     padding-left: 0px;
@@ -312,28 +393,33 @@
     align-items: center;
     display: flex;
   }
-  .container .headerTop .headerContactsMenu .headerMenu ul li.liServise:hover:after {
+  .container .headerTop .headerContactsMenu ul.headerMenu li.liServise:hover:after {
     content: url(../img/close3.png);
     width: 16px;
     height: 23px;
     margin-left: 10px;
   }
-  .container .headerTop .headerContactsMenu .headerMenu ul li:hover div.headerMenuLevel2 {
+  .container .headerTop .headerContactsMenu ul.headerMenu li:hover ul.headerMenuLevel2 {
     display: block;
   }
-  .container .headerTop .headerContactsMenu .headerMenu ul li:last-of-type {
+  .container .headerTop .headerContactsMenu ul.headerMenu li:last-of-type {
     border-bottom: solid 1px rgb(231, 116, 46);
   }
   .container .headerTop .headerContactsMenu #toggle:checked ~ .headerMenu {
     display: block;
   }
   .container .headerTop .headerContactsMenu .headerMenuLevel2 {
-    width: 358px;
+    width: 288px;
+    margin-left: 75px;
+    margin-top: -15px;
+    border-left: solid 1px rgb(231, 116, 46);
+    border-right: solid 1px rgb(231, 116, 46);
   }
-  .container .headerTop .headerContactsMenu .headerMenuLevel2 div {
+  .container .headerTop .headerContactsMenu .headerMenuLevel2 li {
     background-color: rgb(11, 20, 39);
     height: 55px;
     text-transform: none;
+    padding-left: 10px;
   }
   .container .logo {
     position: absolute;
@@ -359,8 +445,34 @@
   .headerContent button {
     align-self: center;
   }
+  .service {
+    padding-bottom: 48px;
+  }
   .service .container {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(1fr);
+  }
+  .doWhat .container img {
+    display: none;
+  }
+  .doWhat .container h2 {
+    font: 34px;
+  }
+  .doWhat .container > div:first-of-type .verticalLine {
+    display: none;
+  }
+  .doWhat .container > div:first-of-type .doWhat1 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    left: 0px;
+    margin-top: 40px;
+  }
+  .doWhat .container > div:first-of-type .doWhat1 .doWhat12 {
+    font-size: 20px;
+    width: 358px;
+    margin-top: 20px;
+  }
+  .doWhat .container > div:nth-of-type(2) div {
+    width: 74px;
   }
 }/*# sourceMappingURL=style.css.map */
