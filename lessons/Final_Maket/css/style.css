@@ -107,6 +107,9 @@
   border-left: solid 3px rgb(231, 116, 46);
   padding-left: 10px;
 }
+.headerMenu li:hover {
+  color: rgb(231, 116, 46);
+}
 .headerMenu li:hover div.headerMenuLevel2 {
   display: block;
   position: absolute;
@@ -130,10 +133,12 @@
   font-weight: 500;
   font-size: 16px;
   color: white;
-  vertical-align: center;
   padding-left: 24px;
   display: flex;
   align-items: center;
+}
+.headerMenuLevel2 div:hover {
+  color: rgb(231, 116, 46);
 }
 .headerMenuLevel2 div:first-of-type {
   border-top: solid 1px rgb(231, 116, 46);
@@ -304,9 +309,14 @@
     border-left: none;
     padding-left: 0px;
     border-top: solid 1px rgb(231, 116, 46);
-    vertical-align: center;
     align-items: center;
     display: flex;
+  }
+  .container .headerTop .headerContactsMenu .headerMenu ul li.liServise:hover:after {
+    content: url(../img/close3.png);
+    width: 16px;
+    height: 23px;
+    margin-left: 10px;
   }
   .container .headerTop .headerContactsMenu .headerMenu ul li:hover div.headerMenuLevel2 {
     display: block;
