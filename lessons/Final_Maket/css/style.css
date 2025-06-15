@@ -183,6 +183,7 @@ ul.headerMenu li:not(:last-of-type) {
 
 .service {
   margin-top: 40px;
+  padding-bottom: 48px;
 }
 .service .container {
   display: grid;
@@ -331,6 +332,102 @@ ul.headerMenu li:not(:last-of-type) {
   color: rgb(231, 116, 46);
 }
 
+.callMaster .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.callMaster .container h2 {
+  padding-top: 40px;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  color: black;
+  text-align: center;
+}
+.callMaster .container .horizontalLine {
+  margin-top: 14px;
+  width: 528px;
+  height: 3px;
+  background-color: rgb(231, 116, 46);
+}
+.callMaster .container .callMasterForm {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  width: 528px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(11, 20, 39);
+}
+.callMaster .container .callMasterForm > p:not(:first-of-type) {
+  margin-top: 20px;
+}
+.callMaster .container .callMasterForm div {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+}
+.callMaster .container .callMasterForm div .agree {
+  width: 26px;
+  height: 26px;
+  margin-top: 0px;
+}
+.callMaster .container .callMasterForm div p {
+  margin-left: 19px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(11, 20, 39);
+}
+.callMaster .container .callMasterForm div p span {
+  font-weight: bold;
+}
+.callMaster .container select,
+.callMaster .container input,
+.callMaster .container textarea {
+  margin-top: 12px;
+  width: 528px;
+  height: 48px;
+  padding-left: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(180, 180, 180);
+}
+.callMaster .container textarea {
+  padding-top: 10px;
+  height: 204px;
+}
+.callMaster .container button {
+  align-self: center;
+  margin-top: 44px;
+  width: 321px;
+  height: 65px;
+  border-radius: 10px;
+  background-image: radial-gradient(rgb(246, 167, 12), rgb(231, 116, 46));
+  color: black;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+.callMaster .container .aboutMaster {
+  margin-top: 58px;
+}
+.callMaster .container .aboutMaster img {
+  float: left;
+}
+.callMaster .container .aboutMaster p {
+  margin-left: 400px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(11, 20, 39);
+}
+
 @media all and (max-width: 420px) {
   .container {
     width: 358px;
@@ -445,9 +542,6 @@ ul.headerMenu li:not(:last-of-type) {
   .headerContent button {
     align-self: center;
   }
-  .service {
-    padding-bottom: 48px;
-  }
   .service .container {
     grid-template-columns: 1fr;
   }
@@ -474,5 +568,32 @@ ul.headerMenu li:not(:last-of-type) {
   }
   .doWhat .container > div:nth-of-type(2) div {
     width: 74px;
+  }
+  .callMaster .container .horizontalLine {
+    width: 100%;
+  }
+  .callMaster .container .callMasterForm {
+    width: 358px;
+  }
+  .callMaster .container .callMasterForm select,
+  .callMaster .container .callMasterForm input,
+  .callMaster .container .callMasterForm textarea {
+    width: 100%;
+  }
+  .callMaster .container .aboutMaster {
+    display: flex;
+    flex-direction: column;
+  }
+  .callMaster .container .aboutMaster img {
+    float: none;
+    order: 2;
+    margin-top: 32px;
+  }
+  .callMaster .container .aboutMaster p {
+    margin-left: 0px;
+    order: 1;
+  }
+  .callMaster .container .aboutMaster p:not(:first-of-type) {
+    margin-top: 18px;
   }
 }/*# sourceMappingURL=style.css.map */

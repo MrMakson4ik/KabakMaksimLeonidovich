@@ -213,6 +213,7 @@ ul.headerMenu {
 
 .service {
     margin-top: 40px;
+    padding-bottom: 48px;
 
     .container {
         display: grid;
@@ -390,6 +391,120 @@ ul.headerMenu {
     }
 }
 
+.callMaster {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2 {
+            padding-top: 40px;
+            text-transform: uppercase;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 48px;
+            color: black;
+            text-align: center;
+        }
+
+        .horizontalLine {
+            margin-top: 14px;
+            width: 528px;
+            height: 3px;
+            background-color: rgba(231, 116, 46, 1);
+        }
+
+        .callMasterForm {
+            display: flex;
+            flex-direction: column;
+            margin-top: 32px;
+            width: 528px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            color: rgba(11, 20, 39, 1);
+
+            >p:not(:first-of-type) {
+                margin-top: 20px;
+            }
+
+            div {
+                margin-top: 20px;
+                display: flex;
+                justify-content: start;
+
+                .agree {
+                    width: 26px;
+                    height: 26px;
+                    margin-top: 0px;
+                }
+
+                p {
+                    margin-left: 19px;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 500;
+                    font-size: 14px;
+                    color: rgba(11, 20, 39, 1);
+
+                    span {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+        select,
+        input,
+        textarea {
+            margin-top: 12px;
+            width: 528px;
+            height: 48px;
+            padding-left: 20px;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            color: rgba(180, 180, 180, 1);
+
+            option {}
+        }
+
+        textarea {
+            padding-top: 10px;
+            height: 204px;
+        }
+
+        button {
+            align-self: center;
+            margin-top: 44px;
+            width: 321px;
+            height: 65px;
+            border-radius: 10px;
+            background-image: radial-gradient(rgba(246, 167, 12, 1), rgba(231, 116, 46, 1));
+            color: black;
+            text-transform: uppercase;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 24px;
+        }
+
+        .aboutMaster {
+            margin-top: 58px;
+
+            img {
+                float: left;
+            }
+
+            p {
+                margin-left: 400px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 500;
+                font-size: 18px;
+                color: rgba(11, 20, 39, 1);
+            }
+        }
+    }
+}
+
 
 // _______________________________НАЧАЛО АДАПТИВ____________________________________
 @media all and (max-width: 420px) {
@@ -547,7 +662,6 @@ ul.headerMenu {
     }
 
     .service {
-        padding-bottom: 48px;
 
         .container {
             grid-template-columns: 1fr;
@@ -575,7 +689,7 @@ ul.headerMenu {
                     text-align: center;
                     left: 0px;
                     margin-top: 40px;
-                   
+
                     .doWhat12 {
                         font-size: 20px;
                         width: 358px;
@@ -588,6 +702,43 @@ ul.headerMenu {
             >div:nth-of-type(2) {
                 div {
                     width: 74px;
+                }
+            }
+        }
+    }
+
+    .callMaster {
+        .container {
+            .horizontalLine {
+                width: 100%;
+            }
+
+            .callMasterForm {
+                width: 358px;
+
+                select,
+                input,
+                textarea {
+                    width: 100%;
+                }
+            }
+
+            .aboutMaster {
+                display: flex;
+                flex-direction: column;
+                img {
+                    float: none;
+                    order: 2;
+                    margin-top: 32px;
+                }
+
+                p {
+                    margin-left: 0px;
+                    order: 1;
+                }
+
+                p:not(:first-of-type) {
+                    margin-top: 18px;
                 }
             }
         }
