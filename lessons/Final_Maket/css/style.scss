@@ -505,6 +505,76 @@ ul.headerMenu {
     }
 }
 
+.whyWe1 {
+    margin-top: 58px;
+    background-color: rgba(11, 20, 39, 1);
+    padding-top: 48px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        div:nth-child(1) {
+            width: 100%;
+            height: 3px;
+            background-color: rgba(231, 116, 46, 1);
+        }
+
+        div:nth-child(2) {
+            width: 100%;
+            margin-top: 40px;
+
+            img {
+                float: left;
+            }
+
+            p {
+                margin-left: 136px;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 500;
+                font-size: 24px;
+                color: white;
+            }
+        }
+
+        >div:nth-child(3) {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 40px;
+
+            div {
+                width: 316px;
+                height: 3px;
+                background-color: rgba(231, 116, 46, 1);
+            }
+
+            p {
+                text-transform: uppercase;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 500;
+                font-size: 24px;
+                color: white;
+            }
+        }
+    }
+}
+
+    // .whyWe12 {}
+
+.footer {
+    background-color: rgba(11, 20, 39, 1);
+    padding-top: 31px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        
+    }
+}
+
 
 // _______________________________НАЧАЛО АДАПТИВ____________________________________
 @media all and (max-width: 420px) {
@@ -726,6 +796,7 @@ ul.headerMenu {
             .aboutMaster {
                 display: flex;
                 flex-direction: column;
+
                 img {
                     float: none;
                     order: 2;
@@ -743,4 +814,53 @@ ul.headerMenu {
             }
         }
     }
+
+    .whyWe1 {
+        padding-bottom: 80px;
+
+        .container {
+            div:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                position: relative;
+
+                img {
+                    float: none;
+                    order: 2;
+                    width: 102px;
+                    height: 96px;
+                    align-self: center;
+                    position: absolute;
+                    top: 355px;
+                    width: 74px;
+                    height: 71px;
+                }
+
+                p {
+                    margin-left: 0px;
+                    order: 1;
+                    text-align: center;
+                }
+            }
+
+            div:nth-child(3) {
+                position: relative;
+                p {
+                    width: 358px;
+                    text-align: center;
+                    position: absolute;
+                    top: 55px;
+                    font-size: 20px;
+                }
+
+                div {
+                    width: 118px;
+                }
+            }
+        }
+    }
+
+    // .whyWe12 {}
+
+
 }
