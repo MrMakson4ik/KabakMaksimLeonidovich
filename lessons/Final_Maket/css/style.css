@@ -479,6 +479,7 @@ ul.headerMenu li:not(:last-of-type) {
 .footer {
   background-color: rgb(11, 20, 39);
   padding-top: 31px;
+  padding-bottom: 27px;
 }
 .footer .container {
   display: flex;
@@ -813,5 +814,62 @@ ul.headerMenu li:not(:last-of-type) {
   }
   .whyWe1 .container div:nth-child(3) div {
     width: 118px;
+  }
+  .footer .container div {
+    flex-direction: column;
+  }
+  .footer .container div .footerLogo {
+    position: relative;
+    order: 3;
+    width: 100%;
+  }
+  .footer .container div .footerLogo img {
+    position: absolute;
+    width: 144px;
+    height: 69px;
+    top: -560px;
+  }
+  .footer .container div .footerMenu {
+    order: 2;
+    width: 100%;
+    margin-top: 24px;
+    flex-direction: row;
+  }
+  .footer .container div .footerContacts {
+    order: 1;
+    position: relative;
+    margin-top: 90px;
+    padding-bottom: 24px;
+  }
+  .footer .container div .footerContacts img[src^="img/Top"] {
+    width: 32px;
+    height: 32px;
+  }
+  .footer .container div .footerContacts div {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer .container div .footerContacts div:nth-of-type(6) {
+    position: absolute;
+    left: 200px;
+    margin-top: 0px;
+    top: -70px;
+  }
+  .footer .container .footerBottom {
+    position: relative;
+  }
+  .footer .container .footerBottom p {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+  .footer .container .footerBottom ul {
+    flex-direction: column;
+  }
+  .footer .container .footerBottom ul li:not(:first-of-type) {
+    border-left: none;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-top: 8px;
   }
 }/*# sourceMappingURL=style.css.map */

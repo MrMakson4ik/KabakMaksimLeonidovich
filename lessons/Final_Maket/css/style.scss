@@ -564,6 +564,7 @@ ul.headerMenu {
 .footer {
     background-color: rgba(11, 20, 39, 1);
     padding-top: 31px;
+    padding-bottom: 27px;
 
     .container {
         display: flex;
@@ -1011,5 +1012,76 @@ ul.headerMenu {
 
     // .whyWe12 {}
 
+    .footer {
+        .container {
+            div {
+                flex-direction: column;
 
+                .footerLogo {
+                    position: relative;
+                    order: 3;
+                    width: 100%;
+
+                    img {
+                        position: absolute;
+                        width: 144px;
+                        height: 69px;
+                        top: -560px;
+                    }
+                }
+
+                .footerMenu {
+                    order: 2;
+                    width: 100%;
+                    margin-top: 24px;
+                    flex-direction: row;
+                }
+
+                .footerContacts {
+                    order: 1;
+                    position: relative;
+                    margin-top: 90px;
+                    padding-bottom: 24px;
+
+                    img[src^='img/Top'] {
+                        width: 32px;
+                        height: 32px;
+                    }
+
+                    div {
+                        display: flex;
+                        flex-direction: row;
+                    }
+
+                    div:nth-of-type(6) {
+                        position: absolute;
+                        left: 200px;
+                        margin-top: 0px;
+                        top: -70px;
+                    }
+                }
+            }
+
+            .footerBottom {
+                position: relative;
+
+                p {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                }
+
+                ul {
+                    flex-direction: column;
+
+                    li:not(:first-of-type) {
+                        border-left: none;
+                        margin-left: 0px;
+                        padding-left: 0px;
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+    }
 }
