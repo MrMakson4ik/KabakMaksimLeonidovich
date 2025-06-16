@@ -464,8 +464,6 @@ ul.headerMenu {
             font-weight: 500;
             font-size: 18px;
             color: rgba(180, 180, 180, 1);
-
-            option {}
         }
 
         textarea {
@@ -561,7 +559,7 @@ ul.headerMenu {
     }
 }
 
-    // .whyWe12 {}
+// .whyWe12 {}
 
 .footer {
     background-color: rgba(11, 20, 39, 1);
@@ -569,9 +567,159 @@ ul.headerMenu {
 
     .container {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
 
-        
+        div {
+            display: flex;
+            justify-content: space-between;
+
+            .footerLogo {
+                display: flex;
+                flex-direction: column;
+                width: 252px;
+
+                img {
+                    width: 236px;
+                    height: 114px;
+                }
+
+                p {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 500;
+                    font-size: 12px;
+                    color: white;
+                    margin-top: 24px;
+                }
+
+                p:first-of-type {
+                    font-weight: bold;
+                    margin-top: 60px;
+                }
+            }
+
+            .footerMenu {
+                display: flex;
+                justify-content: space-between;
+                width: 416px;
+
+                ul {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: white;
+                    list-style-type: none;
+                }
+
+                ul:first-of-type {
+                    text-transform: uppercase;
+                }
+
+                li:not(:first-of-type) {
+                    margin-top: 16px;
+                }
+            }
+
+            .footerContacts {
+                display: flex;
+                flex-direction: column;
+                width: 277px;
+                justify-content: flex-start;
+
+                div {
+                    display: flex;
+                    justify-content: start;
+                }
+
+                p {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 500;
+                    font-size: 24px;
+                    color: white;
+                    margin-left: 8px;
+                }
+
+                div:nth-of-type(2) {
+                    margin-top: 4px;
+                }
+
+                div:nth-of-type(3) {
+                    margin-top: 24px;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+
+                div:nth-of-type(4),
+                div:nth-of-type(5) {
+                    margin-top: 8px;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+
+                div:nth-of-type(6) {
+                    display: flex;
+                    margin-top: 36px;
+
+                    img {
+                        width: 32px;
+                        height: 32px;
+                    }
+
+                    img:not(:first-of-type) {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .footerVerticalLine {
+            width: 100%;
+            height: 3px;
+            background-color: rgba(231, 116, 46, 1);
+            margin-top: 43px;
+        }
+
+        .footerBottom {
+            margin-top: 19px;
+            display: flex;
+            justify-content: space-between;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            color: white;
+
+            p {
+
+                span {
+                    color: rgba(231, 116, 46, 1);
+                }
+            }
+
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                list-style-type: none;
+
+                li:not(:first-of-type) {
+                    border-left: solid 3px rgba(231, 116, 46, 1);
+                    margin-left: 16px;
+                    padding-left: 16px;
+                }
+            }
+        }
     }
 }
 
@@ -845,6 +993,7 @@ ul.headerMenu {
 
             div:nth-child(3) {
                 position: relative;
+
                 p {
                     width: 358px;
                     text-align: center;
