@@ -1,0 +1,121 @@
+.contacts .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contacts .container h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  color: rgb(11, 20, 39);
+  text-transform: uppercase;
+}
+.contacts .container > div:nth-of-type(1) {
+  width: 287px;
+  height: 3px;
+  background-color: rgb(231, 116, 46);
+  margin-top: 14px;
+}
+.contacts .container > img {
+  margin-top: 40px;
+}
+.contacts .container > div:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 28px;
+  margin-bottom: 60px;
+}
+.contacts .container > div:nth-of-type(2) > div {
+  display: flex;
+  flex-direction: column;
+  width: 528px;
+}
+.contacts .container > div:nth-of-type(2) > div > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.contacts .container > div:nth-of-type(2) > div > div img {
+  width: 32px;
+  height: 32px;
+}
+.contacts .container > div:nth-of-type(2) > div > div p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: rgb(11, 20, 39);
+}
+.contacts .container > div:nth-of-type(2) > div > div:not(:first-of-type) {
+  margin-top: 28px;
+}
+.contacts .container > div:nth-of-type(2) > div:nth-of-type(2) {
+  width: 528px;
+}
+.contacts .container > div:nth-of-type(2) > div:nth-of-type(2) > p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: rgb(11, 20, 39);
+}
+.contacts .container > div:nth-of-type(2) > div:nth-of-type(2) > p:nth-of-type(2) {
+  font-weight: 500;
+  font-size: 29px;
+  color: rgb(231, 116, 46);
+  margin-top: 24px;
+  text-transform: uppercase;
+}
+.contacts .container > div:nth-of-type(2) > div:nth-of-type(2) form > p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: rgb(11, 20, 39);
+  margin-top: 16px;
+}
+.contacts .container > div:nth-of-type(2) > div:nth-of-type(2) form div {
+  margin-top: 20px;
+  display: flex;
+  justify-content: start;
+}
+.contacts .container > div:nth-of-type(2) > div:nth-of-type(2) form div .agree {
+  width: 26px;
+  height: 26px;
+  margin-top: 0px;
+}
+.contacts .container > div:nth-of-type(2) > div:nth-of-type(2) form div p {
+  margin-left: 19px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(11, 20, 39);
+}
+.contacts .container > div:nth-of-type(2) > div:nth-of-type(2) form div p span {
+  font-weight: bold;
+}
+.contacts .container > div:nth-of-type(2) > div:nth-of-type(2) form input,
+.contacts .container > div:nth-of-type(2) > div:nth-of-type(2) form textarea {
+  margin-top: 12px;
+  width: 528px;
+  height: 48px;
+  padding-left: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: rgb(180, 180, 180);
+}
+.contacts .container > div:nth-of-type(2) > div:nth-of-type(2) form textarea {
+  padding-top: 10px;
+  height: 204px;
+}
+.contacts .container > div:nth-of-type(2) > div:nth-of-type(2) form button {
+  align-self: center;
+  margin-top: 44px;
+  width: 321px;
+  height: 65px;
+  border-radius: 10px;
+  background-image: radial-gradient(rgb(246, 167, 12), rgb(231, 116, 46));
+  color: black;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}/*# sourceMappingURL=styleContacts.css.map */
