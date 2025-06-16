@@ -1,0 +1,243 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1080px;
+}
+
+.header {
+  background-color: rgb(11, 20, 39);
+  padding-bottom: 34px;
+}
+.header .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+.header .container img.second1:nth-of-type(1) {
+  position: absolute;
+  top: 140px;
+  right: -225px;
+}
+.header .container img.second2:nth-of-type(2) {
+  position: absolute;
+  top: 160px;
+  right: -30px;
+}
+
+.headerTop {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.logo img {
+  width: 236px;
+  height: 114px;
+}
+
+.headerContactsMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 684px;
+}
+
+.headerContacts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerContacts1 {
+  display: flex;
+}
+.headerContacts1 div {
+  display: flex;
+}
+.headerContacts1 div img {
+  width: 32px;
+  height: 32px;
+}
+.headerContacts1 div p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  color: white;
+  margin-left: 8px;
+}
+.headerContacts1 div img:not(:first-of-type) {
+  margin-left: 12px;
+}
+
+.headerContacts2 img:not(:last-of-type) {
+  margin-right: 20px;
+}
+
+/* Скрываем чекбокс */
+#toggle {
+  display: none;
+}
+
+ul.headerMenu {
+  margin-top: 24px;
+  display: flex;
+  list-style-type: none;
+}
+ul.headerMenu li {
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: white;
+  position: relative;
+  cursor: pointer;
+}
+ul.headerMenu > li:not(:first-of-type) {
+  border-left: solid 3px rgb(231, 116, 46);
+  padding-left: 10px;
+}
+ul.headerMenu li:hover {
+  color: rgb(231, 116, 46);
+}
+ul.headerMenu li:hover ul.headerMenuLevel2 {
+  display: block;
+  position: absolute;
+  top: 100%;
+  z-index: 1;
+}
+ul.headerMenu li:not(:last-of-type) {
+  padding-right: 10px;
+}
+
+.headerMenuLevel2 {
+  width: 274px;
+  display: none;
+}
+.headerMenuLevel2 > li {
+  background-color: rgba(11, 20, 39, 0.8);
+  border-bottom: solid 1px rgb(231, 116, 46);
+  cursor: pointer;
+  height: 43px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: white;
+  padding-left: 24px;
+  display: flex;
+  align-items: center;
+}
+.headerMenuLevel2 > li:hover {
+  color: rgb(231, 116, 46);
+}
+.headerMenuLevel2 > li:first-of-type {
+  border-top: solid 1px rgb(231, 116, 46);
+}
+
+@media all and (max-width: 420px) {
+  .header {
+    padding-bottom: 124px;
+  }
+  .header .container {
+    width: 358px;
+  }
+  .header .container > img {
+    display: none;
+  }
+  .header .container .headerTop {
+    margin-top: 26px;
+    flex-direction: column;
+    position: relative;
+  }
+  .header .container .headerTop .headerContactsMenu {
+    /* Стили для картинки */
+    /* Меняем картинку при активном чекбоксе */
+    /* Скрываем выпадающий список по умолчанию */
+    /* Показываем выпадающий список при активном чекбоксе */
+  }
+  .header .container .headerTop .headerContactsMenu .headerContacts {
+    flex-direction: column;
+    position: relative;
+  }
+  .header .container .headerTop .headerContactsMenu .headerContacts .headerContacts1 {
+    flex-direction: column;
+  }
+  .header .container .headerTop .headerContactsMenu .headerContacts .headerContacts1 div {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .header .container .headerTop .headerContactsMenu .headerContacts .headerContacts2 {
+    position: absolute;
+    top: 105px;
+    right: 48%;
+  }
+  .header .container .headerTop .headerContactsMenu .label-img {
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: 0%;
+    width: 36px;
+    height: 32px;
+    background-image: url(../img/open.png);
+    background-size: cover;
+  }
+  .header .container .headerTop .headerContactsMenu #toggle:checked + .label-img {
+    background-image: url(../img/close.png);
+  }
+  .header .container .headerTop .headerContactsMenu ul.headerMenu {
+    display: none;
+    position: relative;
+    top: 70px;
+    width: 358px;
+  }
+  .header .container .headerTop .headerContactsMenu ul.headerMenu > li {
+    height: 55px;
+    border-left: none;
+    padding-left: 0px;
+    border-top: solid 1px rgb(231, 116, 46);
+    align-items: center;
+    display: flex;
+  }
+  .header .container .headerTop .headerContactsMenu ul.headerMenu li.liServise:hover:after {
+    content: url(../img/close3.png);
+    width: 16px;
+    height: 23px;
+    margin-left: 10px;
+  }
+  .header .container .headerTop .headerContactsMenu ul.headerMenu li:hover ul.headerMenuLevel2 {
+    display: block;
+  }
+  .header .container .headerTop .headerContactsMenu ul.headerMenu li:last-of-type {
+    border-bottom: solid 1px rgb(231, 116, 46);
+  }
+  .header .container .headerTop .headerContactsMenu #toggle:checked ~ .headerMenu {
+    display: block;
+  }
+  .header .container .headerTop .headerContactsMenu .headerMenuLevel2 {
+    width: 288px;
+    margin-left: 75px;
+    margin-top: -15px;
+    border-left: solid 1px rgb(231, 116, 46);
+    border-right: solid 1px rgb(231, 116, 46);
+  }
+  .header .container .headerTop .headerContactsMenu .headerMenuLevel2 li {
+    background-color: rgb(11, 20, 39);
+    height: 55px;
+    text-transform: none;
+    padding-left: 10px;
+  }
+  .header .container .logo {
+    position: absolute;
+    top: 70px;
+  }
+  .header .container .logo img {
+    width: 144px;
+    height: 69px;
+  }
+}/*# sourceMappingURL=styleHeaderTop.css.map */

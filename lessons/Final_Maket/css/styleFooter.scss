@@ -1,0 +1,259 @@
+.footer {
+    background-color: rgba(11, 20, 39, 1);
+    padding-top: 31px;
+    padding-bottom: 27px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+
+        div {
+            display: flex;
+            justify-content: space-between;
+
+            .footerLogo {
+                display: flex;
+                flex-direction: column;
+                width: 252px;
+
+                img {
+                    width: 236px;
+                    height: 114px;
+                }
+
+                p {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 500;
+                    font-size: 12px;
+                    color: white;
+                    margin-top: 24px;
+                }
+
+                p:first-of-type {
+                    font-weight: bold;
+                    margin-top: 60px;
+                }
+            }
+
+            .footerMenu {
+                display: flex;
+                justify-content: space-between;
+                width: 416px;
+
+                ul {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 500;
+                    font-size: 16px;
+                    color: white;
+                    list-style-type: none;
+                }
+
+                ul:first-of-type {
+                    text-transform: uppercase;
+                }
+
+                li:not(:first-of-type) {
+                    margin-top: 16px;
+                }
+            }
+
+            .footerContacts {
+                display: flex;
+                flex-direction: column;
+                width: 277px;
+                justify-content: flex-start;
+
+                div {
+                    display: flex;
+                    justify-content: start;
+                }
+
+                p {
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 500;
+                    font-size: 24px;
+                    color: white;
+                    margin-left: 8px;
+                }
+
+                div:nth-of-type(2) {
+                    margin-top: 4px;
+                }
+
+                div:nth-of-type(3) {
+                    margin-top: 24px;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+
+                div:nth-of-type(4),
+                div:nth-of-type(5) {
+                    margin-top: 8px;
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+
+                div:nth-of-type(6) {
+                    display: flex;
+                    margin-top: 36px;
+
+                    img {
+                        width: 32px;
+                        height: 32px;
+                    }
+
+                    img:not(:first-of-type) {
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .footerVerticalLine {
+            width: 100%;
+            height: 3px;
+            background-color: rgba(231, 116, 46, 1);
+            margin-top: 43px;
+        }
+
+        .footerBottom {
+            margin-top: 19px;
+            display: flex;
+            justify-content: space-between;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            color: white;
+
+            p {
+
+                span {
+                    color: rgba(231, 116, 46, 1);
+                }
+            }
+
+            ul {
+                display: flex;
+                justify-content: flex-end;
+                list-style-type: none;
+
+                li:not(:first-of-type) {
+                    border-left: solid 3px rgba(231, 116, 46, 1);
+                    margin-left: 16px;
+                    padding-left: 16px;
+                }
+            }
+        }
+
+        .footerVerticalLine1,
+        .footerVerticalLine2 {
+            display: none;
+            width: 100%;
+            height: 3px;
+            background-color: rgba(231, 116, 46, 1);
+        }
+    }
+}
+
+// _______________________________НАЧАЛО АДАПТИВ____________________________________
+@media all and (max-width: 420px) {
+    .footer {
+        .container {
+            width: 358px;
+
+            div {
+                flex-direction: column;
+
+                .footerVerticalLine1 {
+                    display: block;
+                    order: 2;
+                }
+
+                .footerVerticalLine2 {
+                    display: block;
+                    order: 4;
+                }
+
+                .footerLogo {
+                    position: relative;
+                    order: 5;
+                    width: 100%;
+
+                    img {
+                        position: absolute;
+                        width: 144px;
+                        height: 69px;
+                        top: -590px;
+                    }
+                }
+
+                .footerMenu {
+                    order: 3;
+                    width: 100%;
+                    margin-top: 24px;
+                    flex-direction: row;
+                    padding-bottom: 24px;
+                }
+
+                .footerContacts {
+                    order: 1;
+                    position: relative;
+                    margin-top: 90px;
+                    padding-bottom: 24px;
+
+                    img[src^='img/Top'] {
+                        width: 32px;
+                        height: 32px;
+                    }
+
+                    div {
+                        display: flex;
+                        flex-direction: row;
+                    }
+
+                    div:nth-of-type(6) {
+                        position: absolute;
+                        left: 200px;
+                        margin-top: 0px;
+                        top: -70px;
+                    }
+                }
+            }
+
+            .footerBottom {
+                position: relative;
+
+                p {
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                }
+
+                ul {
+                    flex-direction: column;
+
+                    li:not(:first-of-type) {
+                        border-left: none;
+                        margin-left: 0px;
+                        padding-left: 0px;
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+    }
+}

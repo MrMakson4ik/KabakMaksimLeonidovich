@@ -1,0 +1,62 @@
+.notFound .container div {
+  background-image: url(../img/notFound.gif);
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.notFound .container div p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: rgb(11, 20, 39);
+  padding-top: 673px;
+}
+.notFound .container div h2 {
+  display: none;
+}
+.notFound .container div h3 {
+  display: none;
+}
+.notFound .container div button {
+  margin-top: 24px;
+  width: 321px;
+  height: 65px;
+  border-radius: 10px;
+  background-image: radial-gradient(rgb(246, 167, 12), rgb(231, 116, 46));
+  color: black;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 44px;
+}
+
+@media all and (max-width: 420px) {
+  .notFound .container {
+    width: 358px;
+  }
+  .notFound .container div {
+    background-image: url(../img/notFoundMobil.gif);
+    background-size: contain;
+  }
+  .notFound .container div p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(11, 20, 39);
+    padding-top: 0px;
+  }
+  .notFound .container div h2 {
+    display: none;
+  }
+  .notFound .container div h3 {
+    display: block;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    color: rgb(231, 116, 46);
+    padding-top: 389px;
+  }
+}/*# sourceMappingURL=styleNotFound.css.map */
