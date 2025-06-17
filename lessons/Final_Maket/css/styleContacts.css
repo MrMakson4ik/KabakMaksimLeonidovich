@@ -118,4 +118,41 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 24px;
+}
+
+@media all and (max-width: 420px) {
+  .contacts .container {
+    width: 358px;
+  }
+  .contacts .container h1 {
+    font-size: 34px;
+  }
+  .contacts .container > div:nth-of-type(1) {
+    width: 100%;
+  }
+  .contacts .container > img {
+    display: none;
+  }
+  .contacts .container > div:nth-of-type(2) {
+    flex-direction: column;
+    width: 100%;
+  }
+  .contacts .container > div:nth-of-type(2) > div {
+    width: 100%;
+  }
+  .contacts .container > div:nth-of-type(2) > div:nth-of-type(2) {
+    width: 100%;
+    margin-top: 24px;
+  }
+  .contacts .container > div:nth-of-type(2) > div:nth-of-type(2) form {
+    display: flex;
+    flex-direction: column;
+  }
+  .contacts .container > div:nth-of-type(2) > div:nth-of-type(2) form input,
+  .contacts .container > div:nth-of-type(2) > div:nth-of-type(2) form textarea {
+    width: 100%;
+  }
+  .contacts .container > div:nth-of-type(2) > div:nth-of-type(2) form button {
+    text-align: center;
+  }
 }/*# sourceMappingURL=styleContacts.css.map */

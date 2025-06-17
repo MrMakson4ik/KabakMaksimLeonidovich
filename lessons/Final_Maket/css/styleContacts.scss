@@ -143,3 +143,51 @@
         }
     }
 }
+
+// _______________________________НАЧАЛО АДАПТИВ____________________________________
+@media all and (max-width: 420px) {
+    .contacts {
+        .container {
+            width: 358px;
+
+            h1 {
+                font-size: 34px;
+            }
+
+            >div:nth-of-type(1) {
+                width: 100%;
+            }
+
+            >img {
+                display: none;
+            }
+
+            >div:nth-of-type(2) {
+                flex-direction: column;
+                width: 100%;
+
+                >div {
+                    width: 100%;
+                }
+
+                >div:nth-of-type(2) {
+                    width: 100%;
+                    margin-top: 24px;
+
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                        input,
+                        textarea {
+                            width: 100%;
+                        }
+
+                        button {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
