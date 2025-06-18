@@ -43,6 +43,9 @@
   color: white;
   list-style-type: none;
 }
+.footer .container div .footerMenu ul li:hover {
+  color: rgb(231, 116, 46);
+}
 .footer .container div .footerMenu ul:first-of-type {
   text-transform: uppercase;
 }
@@ -99,8 +102,12 @@
 .footer .container div .footerContacts div:nth-of-type(6) img {
   width: 32px;
   height: 32px;
+  transition: transform 0.3s;
 }
-.footer .container div .footerContacts div:nth-of-type(6) img:not(:first-of-type) {
+.footer .container div .footerContacts div:nth-of-type(6) img:hover {
+  transform: scale(1.5);
+}
+.footer .container div .footerContacts div:nth-of-type(6) a:not(:first-of-type) {
   margin-left: 20px;
 }
 .footer .container .footerVerticalLine {
@@ -130,6 +137,9 @@
   border-left: solid 3px rgb(231, 116, 46);
   margin-left: 16px;
   padding-left: 16px;
+}
+.footer .container .footerBottom ul li:hover {
+  color: rgb(231, 116, 46);
 }
 .footer .container .footerVerticalLine1,
 .footer .container .footerVerticalLine2 {

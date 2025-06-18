@@ -46,6 +46,10 @@
                     font-size: 16px;
                     color: white;
                     list-style-type: none;
+
+                    li:hover {
+                        color: rgba(231, 116, 46, 1);
+                    }
                 }
 
                 ul:first-of-type {
@@ -114,9 +118,14 @@
                     img {
                         width: 32px;
                         height: 32px;
+                        transition: transform 0.3s;
+
+                        &:hover {
+                            transform: scale(1.5);
+                        }
                     }
 
-                    img:not(:first-of-type) {
+                    a:not(:first-of-type) {
                         margin-left: 20px;
                     }
                 }
@@ -155,6 +164,10 @@
                     border-left: solid 3px rgba(231, 116, 46, 1);
                     margin-left: 16px;
                     padding-left: 16px;
+                }
+
+                li:hover {
+                    color: rgba(231, 116, 46, 1);
                 }
             }
         }
