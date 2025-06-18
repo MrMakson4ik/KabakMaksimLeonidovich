@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.menu > li {
+  position: relative;
+  display: inline-block;
+}
+
+.submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: 
+    opacity 0.3s ease,
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.menu > li:hover .submenu,
+.menu > li:focus-within .submenu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+    </style>
+</head>
+<body>
+    <ul class="menu">
+  <li>
+    Навести
+    <ul class="submenu">
+      <li>Пункт 1</li>
+      <li>Пункт 2</li>
+      <li>Пункт 3</li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>

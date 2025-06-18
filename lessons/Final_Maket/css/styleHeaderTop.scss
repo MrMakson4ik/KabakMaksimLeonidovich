@@ -122,10 +122,9 @@ ul.headerMenu {
         color: rgba(231, 116, 46, 1);
 
         ul.headerMenuLevel2 {
-            display: block;
-            position: absolute;
-            top: 100%;
-            z-index: 1;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
         }
     }
 
@@ -137,7 +136,16 @@ ul.headerMenu {
 
 .headerMenuLevel2 {
     width: 274px;
-    display: none;
+    position: absolute;
+    top: 100%;
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    z-index: 1;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 
     >li {
         background-color: rgba(11, 20, 39, 0.8);
